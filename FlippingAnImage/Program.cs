@@ -13,9 +13,10 @@ namespace FlippingAnImage
         {
             int[][] jaggedArray2 = new int[][]
             {
-                new int[] { 1,1,0 },
-                new int[] { 1,0,0 },
-                new int[] { 0,0,1 }
+                new int[] { 1,1,0,1 },
+                new int[] { 1,1,0,1 },
+                new int[] { 1,0,0,0 },
+                new int[] { 0,1,0,1 }
             };
 
             Solution solution = new Solution();
@@ -57,7 +58,7 @@ namespace FlippingAnImage
 
             foreach (var a in A)
             {
-                for (int c = 0; c < a.Length; c++)
+                for (int c = 0; c < a.Length/2; c++)
                 {
                     buffer = a[c];
                     a[c] = a[a.Length - 1 - c];
